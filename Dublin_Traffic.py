@@ -238,7 +238,7 @@ def update_graphs(n_clicks, zone, count_type, prediction_interval):
     return trend_graph, seasonal_graph, residual_graph, actual_graph
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
 
 
 
