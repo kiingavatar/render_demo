@@ -2,6 +2,7 @@ dash==2.6.0
 pandas
 gunicorn
 joblib
-statsmodel
-sklearn
+seasonal_decompose
+auto_arima
+ARIMA
 pyodbc
