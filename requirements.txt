@@ -3,7 +3,4 @@ pandas
 gunicorn
 joblib
 statsmodels
-seasonal_decompose
-auto_arima
-ARIMA
 pyodbc
