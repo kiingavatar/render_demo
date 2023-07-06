@@ -10,7 +10,7 @@ import pandas as pd
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.arima.model import ARIMA
@@ -158,14 +158,12 @@ def get_predictions(zone, count_type, prediction_interval):
     Output("residual-graph", "figure"),
     Output("arima-sarima-actual-graph", "figure"),
     Input("update-button", "n_clicks"),
-    [dash.dependencies.State('zone-dropdown', 'value'),
-     dash.dependencies.State('count-type-radio', 'value'),
-     dash.dependencies.State('prediction-interval-radio', 'value')]
+    [State('zone-dropdown', 'value'),
+     State('count-type-radio', 'value'),
+     State('prediction-interval-radio', 'value')]
 )
 
 def update_graphs(n_clicks, zone, count_type, prediction_interval):
-    if zone is None or count_type is None or prediction_interval is None:
-        return go.Figure(), go.Figure(), go.Figure(), go.Figure()
     
     filtered_data = data[(data['Zone'] == zone) & (data[count_type] > 0)]
     
