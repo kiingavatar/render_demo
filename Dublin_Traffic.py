@@ -24,7 +24,8 @@ data = data.set_index('Times')
 # Create the Dash app
 app = dash.Dash(__name__)
 server = app.server
-
+#Clear the layout and do not display exception till callback gets executed
+app.config.suppress_callback_exceptions = True
 # Set the layout for the app
 app.layout = html.Div([
     html.H1("Dublin City Centre Traffic Count Predictions",
