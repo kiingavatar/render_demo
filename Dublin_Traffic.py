@@ -39,7 +39,7 @@ app.layout = html.Div([
             ],
             placeholder="Select a zone",
             value=None,
-            style={'width': '90%', 'padding': '2px', 'font-size': '10px', 'text-align-last': 'center'}
+            style={'width': '90%', 'padding': '2px', 'font-size': '20px', 'text-align-last': 'center'}
         ),
     ], style={'display': 'flex'}),
 
