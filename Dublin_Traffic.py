@@ -17,22 +17,7 @@ from statsmodels.tsa.arima.model import ARIMA
 from pmdarima import auto_arima
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import pyodbc
-
-server = 'lucky-jindal\LUCKYJINDAL'
-database = 'Forecasting'
-username = 'sa'
-password = '@Lucky7972rose'
-
-# Create the connection string
-conn_str = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-
-# Establish the database connection
-conn = pyodbc.connect(conn_str)
-cursor = conn.cursor()
-
-query = "SELECT * FROM dbo.DublinFootMonth"
-data = pd.read_sql_query(query, conn)
-
+data = pd.read_csv('dublinJ.csv')
 data['Times'] = pd.to_datetime(data['Times'])
 data = data.set_index('Times')
 
