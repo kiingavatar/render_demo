@@ -3,4 +3,5 @@ pandas
 gunicorn
 joblib
 statsmodels
+pmdarima
 pyodbc
