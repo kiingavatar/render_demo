@@ -38,6 +38,7 @@ data = data.set_index('Times')
 
 # Create the Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Set the layout for the app
 app.layout = html.Div([
