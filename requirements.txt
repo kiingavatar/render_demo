@@ -1,4 +1,4 @@
-python==3.7.
+python==3.7.*
 dash==2.6.0
 pandas
 gunicorn
