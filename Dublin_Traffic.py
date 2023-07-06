@@ -239,10 +239,7 @@ def update_graphs(n_clicks, zone, count_type, prediction_interval):
 
 if __name__ == '__main__':
     app.run_server()
-    
-# Close the cursor and connection
-cursor.close()
-conn.close()
+
 
 
 # In[ ]:
