@@ -164,7 +164,7 @@ def get_predictions(zone, count_type, prediction_interval):
 
 def update_graphs(n_clicks, zone, count_type, prediction_interval):
     if zone is None or count_type is None or prediction_interval is None:
-        return go.Figure(), go.Figure(), go.Figure(), go.Figure()
+        return None, None, None, None
     
     filtered_data = data[(data['Zone'] == zone) & (data[count_type] > 0)]
     
