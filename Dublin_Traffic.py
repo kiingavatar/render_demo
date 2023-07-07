@@ -185,9 +185,6 @@ def update_graphs(n_clicks, zone, count_type, prediction_interval):
         # Prediction interval
         if prediction_interval == "hourly":
             prediction_interval = 1
-       Continuing from the previous code snippet:
-
-```python
         elif prediction_interval == "daily":
             prediction_interval = 24
         elif prediction_interval == "weekly":
