@@ -28,7 +28,6 @@ app.layout = html.Div([
     
     html.Div([
         html.Script(
-        '''
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KHT3ZRKTL"></script>
         <script>
@@ -38,7 +37,6 @@ app.layout = html.Div([
 
           gtag('config', 'G-7KHT3ZRKTL');
         </script>
-        '''
         )
     ]),
 
