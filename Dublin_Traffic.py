@@ -31,18 +31,18 @@ app.layout = html.Div([
     html.H1("Dublin City Centre Traffic Count Predictions",
             style={'textAlign': 'center', 'color': '#503D36', 'font-size': '24px'}),
     
-    html.Head([
+    html.Div([
         html.Script(
-            '''
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-7KHT3ZRKTL');
-            </script>
-            '''
+        '''
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7KHT3ZRKTL');
+        </script>
+        '''
         )
     ]),
 
